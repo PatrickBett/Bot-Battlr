@@ -1,98 +1,122 @@
-/* App.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #15ff00;
+.botsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap into the next row */
+  justify-content: space-between;
+  /* Evenly distribute items with space between them */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  max-width: 50cm;
+  /* Set a maximum width of 6 centimeters */
+  max-height: 2000cm;
+  /* Set a height of 7 centimeters */
+  padding: 10px;
+  /* Add some padding for spacing between the container and items */
+  box-sizing: border-box;
+  /* Include padding in the total width/height */
+  background-color: #d6b8b8;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.bots {
+  flex: 1;
+  /* Equal width for each bot in a row */
+  width: 5cm;
+  /* Set a maximum width for each bot, considering the margin */
+  margin: 10px;
+  /* Add some spacing between bots */
+  padding: 10px;
+  /* Add padding for bot content */
+  text-align: center;
+  /* Center bot content horizontally */
+  background-color: #877474;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(179, 67, 11, 0.1);
+}
+
+/* Style for the 'stats' section */
+#stats {
+  font-size: 14px;
+  text-align: center;
+  display: flex
+}
+
+/* Style for the bot image */
+.bots img {
+  max-width: 100%;
+  height: auto;
+}
+
+#fetchContainer {
+  background-color: bisque;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  color: #877474;
 }
 
-.bot-collection,
-.your-bot-army {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 20px;
+.addedBots {
+  height: 12cm;
+  margin: 20px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 1cm;
 }
 
-.bot-card {
-  max-width: 300px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+
+.bots p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.bot-card img {
+.botsDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.bot-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.bot-card p {
-  margin: 5px 0;
-}
-
-.bot-card button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  font-size: 14px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.bot-card button:hover {
-  background-color: #0056b3;
-}
-
-.your-bot-army {
-  margin-top: 30px;
-}
-/* App.css */
-.App {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent white background */
+  z-index: 1;
+  /* Place the overlay above other content */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.your-bot-army {
-  margin-bottom: 20px;
-}
-
-.bot-filter-sort {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.bot-collection {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
+.addedBots {
+  /* Add your positioning and styling rules here */
+  display: flex;
+  /* Use flexbox layout */
+  flex-wrap: wrap;
+  /* Wrap items to the next line if there's not enough space */
+  justify-content: flex-start;
+  /* Start from the left edge of the container */
+}
 
+.addedBot {
+  /* Styling for individual enlisted bots */
+  margin: 10px;
+  /* Add margin between the enlisted bots */
+}
+
+.addedBots {
+  position: relative;
+  margin-top: 0cm;
+  /* Other styles */
+}
+
+/* Add the following styles to enable horizontal scrolling for enlisted bots */
+.enlistedBotsContainer {
+  display: flex;
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  max-width: 32cm;
+  /* Allow maximum width for the enlisted bots container */
+}
+
+.enlistedBots {
+  display: flex;
+  flex-direction: row;
+  /* Display enlisted bots in a row */
+}
