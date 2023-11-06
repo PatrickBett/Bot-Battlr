@@ -120,3 +120,7 @@ h1 {
   flex-direction: row;
   /* Display enlisted bots in a row */
 }
+
+.addedBots{
+  background-color: rgb(39, 253, 39);
+}

@@ -1,9 +1,11 @@
 import React from 'react';
+import '../App.css';
 
 function AddedBots({ enlistedBots, onDelete }) {
   const handleDelete = (bot) => {
-    onDelete(bot);
-  }
+    onDelete(bot); // Pass the specific bot object to onDelete function
+  };
+
   return (
     <div className="addedBots">
       <h1>My BOT army</h1>
@@ -20,7 +22,8 @@ function AddedBots({ enlistedBots, onDelete }) {
                 <p>{bot.health}</p>
                 <p>{bot.damage}</p>
                 <p>{bot.armor}</p>
-                <button onClick={handleDelete}>Delete</button>
+                {/* Pass the specific bot to the handleDelete function */}
+                <button onClick={() => handleDelete(bot)}>Delete</button>
               </div>
             </div>
           ))}
